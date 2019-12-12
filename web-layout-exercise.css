@@ -1,0 +1,72 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .5fr .5fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.nav {
+    grid-area: 1 / 1 / 2 / 7;
+}
+.header {
+    grid-area: 2 / 1 / 3 / 7;
+}
+#box1 {
+    grid-area: 3 / 1 / 4 / 3;
+    padding-left: 1em;
+}
+#box2 {
+    grid-area: 3 / 3 / 4 / 5;
+}
+#box3 {
+    grid-area: 3 / 5 / 4 / 7;
+    padding-right: 1em;
+}
+.footer {
+    grid-area: 4 / 1 / 5 / 7;
+}
+.btn {
+   background-color: #3F9ED7;
+}
+.get-started-btn {
+    background-color: #55BA55;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: #666666;
+}
+nav ul {
+    list-style: none; /*gets rid of bullet points*/
+    padding: 0;
+    margin: 0;
+    height: inherit; /*avoids explicit height*/
+    align-items: center; /*puts list items in center  of bar*/
+    display: flex; /* made unordered list a flex container */
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 1em;
+}
+nav a:hover {
+    color: blue;
+}
+#right-side-nav {
+   padding-left: auto;
+    flex-basis: 73%;
+}
+h1 {
+    text-align: center;
+}
+#sound{
+    text-align: center;
+}
+#go-to-right {
+    display: flex;
+    flex-basis: 75%;
+}
