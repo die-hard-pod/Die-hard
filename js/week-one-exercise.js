@@ -19,40 +19,70 @@ function fuelRequired(value){
 
 }
 
+
 //Display array fuelMass2 after calculation is performed
-console.log(fuelMass2);
+// console.log(fuelMass2);
 
 //Display the total sum of fuel requirements using .reduce adding each value of the array fuelMass2
-console.log(fuelMass2.reduce((a, b) => a + b, 0));
+// console.log(fuelMass2.reduce((a, b) => a + b, 0));
 
 //Get the sum of the fuel using a for loop
-var sum = 0;
-for(var i = 0; i < fuelMass2.length; i++){
-    sum += fuelMass2[i];
+function fuelMass1(value) {
+
+    var sum = 0;
+
+    for (var i = 0; i <value.length; i++) {
+
+        sum += value[i];
+    }
+    return sum;
 }
-//Display sum to console using for loop
-console.log(sum);
+// //Display sum to console using for loop
+console.log(fuelMass1(fuelMass2));
+
+// Part 2
+function fuelTwo(value){
+
+    var totalFuel = 0;
+
+    for (var i = 0; i < value.length; i++) {
+        var currentMass = value[i];
+        var currentMassFuel = Math.floor((currentMass/3) - 2)
+
+        while(currentMassFuel >= 0) {
+
+            totalFuel += currentMassFuel
+            currentMassFuel = Math.floor((currentMassFuel/3) - 2)
+        }
+    }
+    return totalFuel;
+}
+
+
+//Display array with all the fuel mass totals
+console.log(fuelTwo(fuelMass));
+
 
 //-------------------------------------------------------------------------------------
 
 
 //Ceasar's Cipher
-function caesarCipher(string, key) {
-    var result = "";
-    for (var i = 0; i < string.length; i++) {
-        var c = string.charCodeAt(i);
-        if(c >= 65 && c <=  90) {
-            result += String.fromCharCode((c - 65 + key) % 26 + 65);  // Uppercase
-
-        }else if(c >= 97 && c <= 122){
-
-            result += String.fromCharCode((c - 97 + key) % 26 + 97);  // Lowercase
-
-        }else
-            result += string.charAt(i);  // Copy
-    }
-    return result;
-}
-// Expected outcome "Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj"
-console.log(caesarCipher("Always Look on the Bright Side of Life", 5));
-console.log(caesarCipher("Zebra", 5));
+// function caesarCipher(string, key) {
+//     var result = "";
+//     for (var i = 0; i < string.length; i++) {
+//         var c = string.charCodeAt(i);
+//         if(c >= 65 && c <=  90) {
+//             result += String.fromCharCode((c - 65 + key) % 26 + 65);  // Uppercase letters
+//
+//         }else if(c >= 97 && c <= 122){
+//
+//             result += String.fromCharCode((c - 97 + key) % 26 + 97);  // Lowercase letters
+//
+//         }else
+//             result += string.charAt(i);
+//     }
+//     return result;
+// }
+// // Expected outcome "Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj"
+// console.log(caesarCipher("Always Look on the Bright Side of Life", 5));
+// console.log(caesarCipher("Zebra", 5));
