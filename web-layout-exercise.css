@@ -31,6 +31,8 @@
 }
 .get-started-btn {
     background-color: #55BA55;
+    border-radius: 40%;
+    text-align: center;
 }
 body {
     margin: 0;
