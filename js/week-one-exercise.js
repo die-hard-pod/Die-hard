@@ -47,7 +47,7 @@ function fuelTwo(value){
 
     for (var i = 0; i < value.length; i++) {
         var currentMass = value[i];
-        var currentMassFuel = Math.floor((currentMass/3) - 2)
+        var currentMassFuel = Math.floor((currentMass/3) - 2);
 
         while(currentMassFuel >= 0) {
 
@@ -67,22 +67,22 @@ console.log(fuelTwo(fuelMass));
 
 
 //Ceasar's Cipher
-// function caesarCipher(string, key) {
-//     var result = "";
-//     for (var i = 0; i < string.length; i++) {
-//         var c = string.charCodeAt(i);
-//         if(c >= 65 && c <=  90) {
-//             result += String.fromCharCode((c - 65 + key) % 26 + 65);  // Uppercase letters
-//
-//         }else if(c >= 97 && c <= 122){
-//
-//             result += String.fromCharCode((c - 97 + key) % 26 + 97);  // Lowercase letters
-//
-//         }else
-//             result += string.charAt(i);
-//     }
-//     return result;
-// }
-// // Expected outcome "Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj"
-// console.log(caesarCipher("Always Look on the Bright Side of Life", 5));
-// console.log(caesarCipher("Zebra", 5));
+function caesarCipher(string, key) {
+    var result = "";
+    for (var i = 0; i < string.length; i++) {
+        var c = string.charCodeAt(i);
+        if(c >= 65 && c <=  90) {
+            result += String.fromCharCode((c - 65 + key) % 26 + 65);  // Uppercase letters
+
+        }else if(c >= 97 && c <= 122){
+
+            result += String.fromCharCode((c - 97 + key) % 26 + 97);  // Lowercase letters
+
+        }else
+            result += string.charAt(i);
+    }
+    return result;
+}
+// Expected outcome "Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj"
+console.log(caesarCipher("Always Look on the Bright Side of Life", 5));
+console.log(caesarCipher("Zebra", 5));
