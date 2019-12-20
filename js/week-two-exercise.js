@@ -106,7 +106,7 @@ function iqTest(numbers){
     if (odds.length === 1) {
         return numberArray.indexOf(odds[0]) + 1;
     }else if(evens.length === 1){
-        return numberArray.indexOf(odds[0]) + 1;
+        return numberArray.indexOf(evens[0]) + 1;
     }
 }
 
